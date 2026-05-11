@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 
 function Pomodoro() {
-  // TODO 1: Declara los estados timeLeft e isRunning
+  // Estados
   const [timeLeft, setTimeLeft] = useState(1500); // 25 minutos en segundos
   const [isRunning, setIsRunning] = useState(false);
 
-  // TODO 2: Declara intervalRef con useRef
+  // Referencia para el intervalo
   const intervalRef = useRef(null);
 
-  // TODO 3: Implementa el useEffect para el timer
+  // useEffect para manejar el timer
   useEffect(() => {
     if (isRunning && timeLeft > 0) {
       intervalRef.current = setInterval(() => {
@@ -20,20 +20,20 @@ function Pomodoro() {
       setIsRunning(false);
     }
 
-    // Función de limpieza: elimina el intervalo cuando el efecto se desmonta o se re-ejecuta
+    // Cleanup: eliminar el intervalo
     return () => {
       clearInterval(intervalRef.current);
     };
   }, [isRunning, timeLeft]);
 
-  // TODO 4: Funcion formatTime(seconds) => "MM:SS"
+  // Formatear tiempo MM:SS
   const formatTime = (seconds) => {
     const minutos = Math.floor(seconds / 60);
     const segundos = seconds % 60;
     return `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
   };
 
-  // TODO 5: Funciones toggleTimer y resetTimer
+  // Funciones
   const toggleTimer = () => {
     setIsRunning(!isRunning);
   };
@@ -43,7 +43,6 @@ function Pomodoro() {
     setTimeLeft(1500);
   };
 
-  // TODO 6: Renderiza el tiempo y los botones
   return (
     <div style={{ textAlign: 'center', padding: '2rem' }}>
       <h1>Temporizador Pomodoro</h1>
