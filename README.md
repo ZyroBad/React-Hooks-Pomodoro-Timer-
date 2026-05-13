@@ -1,16 +1,82 @@
-# React + Vite
+Nombre: David Sebastián Lemus Nitsch
+Carnet: 241155
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Pomodoro Timer - React Hooks
 
-Currently, two official plugins are available:
+Proyecto de aprendizaje para practicar `useState`, `useEffect`, `useRef` y manejo de estado en React.  
+Tres niveles de dificultad progresiva, cada uno en una rama separada de GitHub y con su video demostrativo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Ramas del proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Rama | Descripción | Video | Enlace GitHub |
+|------|-------------|-------|---------------|
+| `nivel-1` | Timer básico (25 min, inicio/pausa/reinicio) | [Ver video](https://youtube.com/shorts/tPlzYubTcNE) | [Ver rama](https://github.com/ZyroBad/React-Hooks-Pomodoro-Timer-/tree/nivel-1) |
+| `nivel-2` | Work/Break + historial de sesiones | [Ver video](https://youtu.be/fkVBdSifEsY) | [Ver rama](https://github.com/ZyroBad/React-Hooks-Pomodoro-Timer-/tree/nivel-2) |
+| `nivel-3` | Timer completo con configuración, estadísticas, sonido y barra de progreso | [Ver video](https://youtu.be/qrEhTq9-ZMQ) | [Ver rama](https://github.com/ZyroBad/React-Hooks-Pomodoro-Timer-/tree/nivel-3) |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Nivel 1 - Timer Básico
+
+- Timer de 25 minutos
+- Botones: Iniciar, Pausar, Reiniciar
+- Formato MM:SS
+
+[Ver video demostración](https://youtube.com/shorts/tPlzYubTcNE)
+
+---
+
+## Nivel 2 - Work/Break + Historial
+
+- Modos: Trabajo (25 min) y Descanso (5 min)
+- Cambio automático entre modos al llegar a 0
+- Historial de sesiones completadas
+- Muestra número de sesión, duración y hora
+
+[Ver video demostración](https://youtu.be/fkVBdSifEsY)
+
+---
+
+## Nivel 3 - Timer Completo
+
+- Configuración personalizada (minutos de trabajo y descanso)
+- Inputs numéricos (rango 1-60)
+- Barra de progreso visual
+- Alerta sonora al completar sesión
+- Estadísticas: total de sesiones y tiempo acumulado
+- Botón "Guardar sesión" (sesión parcial)
+- Diseño mejorado con badges y colores
+
+[ Ver video demostración](https://youtu.be/qrEhTq9-ZMQ)
+
+---
+
+## Cómo ejecutar el proyecto
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/ZyroBad/React-Hooks-Pomodoro-Timer-.git
+
+# Entrar a la carpeta
+cd React-Hooks-Pomodoro-Timer-
+
+# Cambiar a la rama deseada (ej: nivel-3)
+git checkout nivel-3
+
+# Instalar dependencias
+npm install
+
+# Ejecutar el proyecto
+npm run dev
+
+-- Tecnologías utilizadas
+React 19
+
+Vite
+
+JavaScript ES2022+
+
+HTML5 / CSS3
+
